@@ -6,32 +6,12 @@ class WithDockerTest < Minitest::Test
     `docker-compose build`
   end
 
-  def test_centos_6
-    test with: 'centos_6'
-  end
-
-  def test_centos_7
-    test with: 'centos_7'
-  end
-
   def test_debian_8
     test with: 'debian_8'
   end
 
   def test_debian_9
     test with: 'debian_9'
-  end
-
-  def test_with_ubuntu_14
-    test with: 'ubuntu_14.04'
-  end
-
-  def test_with_ubuntu_16
-    test with: 'ubuntu_16.04'
-  end
-
-  def test_with_ubuntu_18
-    test with: 'ubuntu_18.04'
   end
 
   def test_with_macos
