@@ -25,7 +25,7 @@ suffix = case RbConfig::CONFIG['host_os']
 binary = "#{__FILE__}_#{suffix}"
 
 if File.exist?("#{binary}.bz2") && !File.exist?(binary)
-  system("bzip2 --decompress --keep #{binary}.bz2") ||
+  system("bzip2 --decompress --keep #{binary}.bz2 -f") ||
     raise("Decompression of #{binary}.bz2 failed. Do you have bzip2 installed?")
 end
 
