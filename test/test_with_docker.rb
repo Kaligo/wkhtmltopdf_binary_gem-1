@@ -6,10 +6,6 @@ class WithDockerTest < Minitest::Test
     `docker-compose build`
   end
 
-  def test_debian_8
-    test with: 'debian_8'
-  end
-
   def test_debian_9
     test with: 'debian_9'
   end
